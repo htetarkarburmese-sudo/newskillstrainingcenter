@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Skills Training Center</title>
+
+<!-- ICON -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<!-- ANIMATION -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:'Segoe UI',sans-serif;background:#f4f6f9;scroll-behavior:smooth;}
+header{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:white;text-align:center;padding:80px 20px;}
+header img{width:150px;}
+h1{margin:10px 0;}
+.section{padding:80px 20px;text-align:center;}
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;}
+.card{background:white;width:300px;padding:25px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.1);transition:0.4s;}
+.card:hover{transform:translateY(-15px);}
+.btn{padding:12px 25px;border-radius:30px;text-decoration:none;color:white;font-weight:bold;display:inline-block;margin:10px;}
+.primary{background:#007bff;}
+.success{background:#28a745;}
+.danger{background:#dc3545;}
+iframe{width:90%;height:350px;border-radius:15px;}
+footer{background:#111;color:white;text-align:center;padding:20px;}
+.floating{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:15px;}
+.floating a{background:#007bff;color:white;padding:15px;border-radius:50%;font-size:20px;}
+</style>
+</head>
+
+<body>
+
+<header data-aos="fade-down">
+<img src="logo.png">
+<h1 id="title">New Skills Training Center</h1>
+<p id="subtitle">Upgrade Your Skills, Build Your Future</p>
+
+<a href="https://forms.gle/P3QbgVYQq4LA5PAH8" class="btn primary" target="_blank">
+<i class="fa fa-user-plus"></i> Register Now
+</a>
+
+<button onclick="changeLanguage()" class="btn success">🌐 Language</button>
+</header>
+
+<section class="section" data-aos="fade-up">
+<h2 id="profileTitle">Company Profile</h2>
+<p id="profileText">
+NSTC teaches language, technology, computer and business subjects 
+for Myanmar youth development in Thailand.
+</p>
+</section>
+
+<section class="section" data-aos="fade-up">
+<h2>Our Courses</h2>
+<div class="cards">
+
+<div class="card" data-aos="zoom-in">
+<i class="fa fa-language fa-3x"></i>
+<h3>Language Courses</h3>
+<p>Thai Level 1-4, Thai Speaking, Chinese, Government School Preparation</p>
+</div>
+
+<div class="card" data-aos="zoom-in" data-aos-delay="200">
+<i class="fa fa-scissors fa-3x"></i>
+<h3>Vocational Skills</h3>
+<p>Baking, Juice Course, Haircut Basic & Advanced, Electrical Repair</p>
+</div>
+
+<div class="card" data-aos="zoom-in" data-aos-delay="400">
+<i class="fa fa-laptop fa-3x"></i>
+<h3>Digital Skills</h3>
+<p>Computer Basic, Graphic Design, Digital Income</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" data-aos="fade-right">
+<h2>Target Audience</h2>
+<p>
+Myanmar youth and workers in Thailand 
+who want better jobs and practical skills.
+</p>
+</section>
+
+<section class="section" data-aos="fade-left">
+<h2>Buyer Persona</h2>
+<p>
+Ko Aung Aung (Age 22), Myanmar worker in Thailand.
+Needs Thai language and vocational skills to secure stable job.
+</p>
+</section>
+
+<section class="section" data-aos="fade-up">
+<h2>SMART Goal</h2>
+<p>
+Train 500+ Myanmar students within 12 months 
+with measurable progress and job placement success.
+</p>
+</section>
+
+<section class="section" data-aos="zoom-in">
+<h2>Student Review Videos</h2>
+
+<a href="https://www.facebook.com/share/v/1HcRfvybuD/" target="_blank" class="btn primary">
+<i class="fab fa-facebook"></i> Watch Video 1
+</a>
+
+<a href="https://www.facebook.com/share/v/1DUPrgfkGD/" target="_blank" class="btn success">
+<i class="fab fa-facebook"></i> Watch Video 2
+</a>
+
+<a href="https://www.facebook.com/share/v/1FbCKyjuie/" target="_blank" class="btn danger">
+<i class="fab fa-facebook"></i> Watch Video 3
+</a>
+
+</section>
+
+<section class="section" data-aos="fade-up">
+<h2>Our Location</h2>
+
+<iframe src="https://www.google.com/maps?q=13.64685772292552,100.59574836738764&output=embed"></iframe>
+
+</section>
+
+<section class="section" data-aos="fade-up">
+<h2>Contact Us</h2>
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button class="btn primary">Send Message</button>
+</form>
+</section>
+
+<div class="floating">
+<a href="https://m.me/180932821778115" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+<a href="https://www.facebook.com/newskillscenter" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+
+<footer>
+© 2026 New Skills Training Center
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:1200});
+let eng=true;
+function changeLanguage(){
+if(eng){
+document.getElementById("title").innerText="နယူးစကီလ် သင်တန်းကျောင်း";
+document.getElementById("subtitle").innerText="ကျွမ်းကျင်မှုမြှင့်တင်ပြီး အနာဂတ်တည်ဆောက်ပါ";
+document.getElementById("profileTitle").innerText="ကုမ္ပဏီအကြောင်း";
+document.getElementById("profileText").innerText="NSTC သည် မြန်မာလူငယ်များနှင့် ထိုင်းနိုင်ငံရှိအလုပ်သမားများအတွက် ဘာသာစကား၊ လက်တွေ့နှင့် ဒစ်ဂျစ်တယ်သင်တန်းများ ပေးပါသည်။";
+eng=false;
+}else{location.reload();}
+}
+</script>
+
+</body>
+</html>
