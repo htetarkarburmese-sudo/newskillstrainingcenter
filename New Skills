@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Skills Training Center - NS</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&family=Inter:wght@400;600;800&display=swap');
+        
+        body { font-family: 'Inter', 'Pyidaungsu', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(15px); }
+        .hero-gradient { background: radial-gradient(circle at top right, #e0e7ff, #ffffff, #f0f7ff); }
+        
+        /* Language System */
+        .lang-en .mm-text { display: none; }
+        .lang-mm .en-text { display: none; }
+
+        /* Animation Blobs */
+        .blob { position: absolute; filter: blur(60px); z-index: -1; border-radius: 50%; animation: move 10s infinite alternate; }
+        @keyframes move { from { transform: translate(0, 0); } to { transform: translate(30px, 50px); } }
+
+        /* Course Detail Styling */
+        .course-detail { max-height: 0; overflow: hidden; transition: all 0.5s cubic-bezier(0,1,0,1); }
+        .course-card.active .course-detail { max-height: 500px; transition: all 0.5s cubic-bezier(1,0,1,0); margin-top: 1.5rem; }
+        .course-card.active i.fa-chevron-down { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 lang-mm" id="body-context">
+
+    <nav class="fixed w-full z-50 glass-nav shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Logo-2.jpg" alt="NS" class="w-12 h-12 rounded-full object-cover border-2 border-blue-600 shadow-lg" onerror="this.src='https://via.placeholder.com/50?text=NS'">
+                <div>
+                    <h1 class="font-black text-blue-900 leading-none text-xl tracking-tight">NEW SKILLS</h1>
+                    <p class="text-[10px] text-blue-600 font-bold tracking-widest uppercase">Training Center</p>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex space-x-8 font-bold text-gray-600 text-sm uppercase">
+                <a href="#home" class="hover:text-blue-600 transition tracking-wider"><span class="mm-text">ပင်မ</span><span class="en-text">Home</span></a>
+                <a href="#about" class="hover:text-blue-600 transition tracking-wider"><span class="mm-text">အကြောင်း</span><span class="en-text">About</span></a>
+                <a href="#courses" class="hover:text-blue-600 transition tracking-wider"><span class="mm-text">သင်တန်းများ</span><span class="en-text">Courses</span></a>
+                <a href="#reviews" class="hover:text-blue-600 transition tracking-wider"><span class="mm-text">မှတ်ချက်များ</span><span class="en-text">Reviews</span></a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleLang()" class="bg-blue-600 text-white px-4 py-2 rounded-full font-bold text-xs flex items-center gap-2 hover:bg-blue-700 transition shadow-md">
+                    <i class="fas fa-globe"></i> <span id="lang-btn">English</span>
+                </button>
+                <a href="https://forms.gle/P3QbgVYQq4LA5PAH8" class="hidden sm:block bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition active:scale-95">
+                    <span class="mm-text">စာရင်းသွင်းရန်</span><span class="en-text">Enroll Now</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-gradient pt-40 pb-24 px-6 relative overflow-hidden">
+        <div class="blob w-96 h-96 bg-blue-200 top-[-10%] right-[-5%]"></div>
+        <div class="blob w-72 h-72 bg-purple-100 bottom-[10%] left-[-5%]"></div>
+
+        <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm mb-6 border border-blue-50">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span></span>
+                    <span class="text-[10px] font-black text-blue-800 tracking-widest uppercase">Success Starts Here</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 mb-8 leading-[1.1]">
+                    <span class="mm-text">မနက်ဖြန်အတွက် <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">ကျွမ်းကျင်မှုအသစ်</span></span>
+                    <span class="en-text">Build Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Future Career</span> With NS</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
+                    <span class="mm-text">ထိုင်းနိုင်ငံရောက် မြန်မာလူငယ်များအတွက် ပိုမိုကောင်းမွန်သော အလုပ်အကိုင်ရရှိစေရန် ဘာသာစကားနှင့် အသက်မွေးဝမ်းကျောင်းပညာရပ်များကို အကောင်းဆုံးသင်ကြားပေးနေပါသည်။</span>
+                    <span class="en-text">Providing professional language and vocational training to empower Myanmar youth in Thailand for better job opportunities.</span>
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://m.me/180932821778115" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:shadow-2xl hover:shadow-blue-200 transition-all">
+                        <i class="fab fa-facebook-messenger text-xl"></i> Messenger
+                    </a>
+                    <a href="https://www.facebook.com/newskillscenter" class="bg-white text-slate-900 border border-gray-200 px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-gray-50 transition-all">
+                        <i class="fab fa-facebook text-xl text-blue-600"></i> Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="relative" data-aos="zoom-in-left">
+                <img src="N-2.jpg" alt="NS" class="rounded-[3rem] shadow-2xl border-[12px] border-white relative z-10" onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80'">
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl z-20 hidden md:block" data-aos="fade-up" data-aos-delay="500">
+                    <p class="text-3xl font-black text-blue-600 italic">500+</p>
+                    <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Graduated Students</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-up">
+                    <h2 class="text-sm font-bold text-blue-600 uppercase tracking-[0.2em] mb-4">Company Profile</h2>
+                    <h3 class="text-3xl font-black text-slate-900 mb-6 italic border-l-8 border-blue-600 pl-6">New Skills Training Center (NS)</h3>
+                    <p class="text-lg text-slate-600 leading-[2] mb-8">
+                        ကျွန်ုပ်တို့သင်တန်းကျောင်းသည် ထိုင်းနိုင်ငံတွင် အခြေချနေထိုင်သော မြန်မာလူငယ်များအတွက် ရည်ရွယ်ပြီး ဘာသာစကား၊ ကွန်ပျူတာ နှင့် လက်တွေ့အသက်မွေးဝမ်းကျောင်း အတတ်ပညာများကို စနစ်တကျ ပြုစုပျိုးထောင်ပေးနေသည့် Center တစ်ခုဖြစ်ပါသည်။
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="p-4 bg-gray-50 rounded-2xl">
+                            <span class="block text-3xl font-black text-blue-600 mb-1 italic">500+</span>
+                            <span class="text-xs font-bold text-gray-500 uppercase">Students Trained</span>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-2xl">
+                            <span class="block text-3xl font-black text-blue-600 mb-1 italic">10+</span>
+                            <span class="text-xs font-bold text-gray-500 uppercase">Expert Trainers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-xl" data-aos="fade-left">
+                    <img src="N-1.jpg" class="w-full" onerror="this.src='https://images.unsplash.com/photo-1513258496099-48168024adb0?auto=format&fit=crop&w=800&q=80'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-4xl font-black text-slate-900 mb-4 uppercase tracking-tighter" data-aos="fade-up">
+                    <span class="mm-text">သင်ကြားပေးနေသော သင်တန်းများ</span><span class="en-text">Our Training Programs</span>
+                </h2>
+                <div class="h-1.5 w-20 bg-blue-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-500 font-medium" data-aos="fade-up">
+                    <span class="mm-text">သင်တန်းတစ်ခုချင်းစီကို နှိပ်၍ အသေးစိတ် Program များကို ကြည့်ရှုနိုင်ပါသည်။</span>
+                    <span class="en-text">Click on each category to see available detailed programs.</span>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="course-card group bg-gray-50 p-8 rounded-[2.5rem] border border-gray-100 cursor-pointer transition-all hover:bg-white hover:shadow-2xl hover:border-blue-100" onclick="toggleCourse(this)" data-aos="fade-up">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-3xl shadow-lg shadow-blue-100 group-hover:rotate-12 transition-transform">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-400 group-hover:text-blue-600 transition-transform"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-2 italic uppercase">Language Skills</h3>
+                    <p class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-4">Communication focus</p>
+                    
+                    <div class="course-detail">
+                        <ul class="space-y-3 border-t border-gray-100 pt-4">
+                            <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-blue-500"></i> Thai Language Level 1/2</li>
+                            <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-blue-500"></i> Thai Language Level 3/4</li>
+                            <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-blue-500"></i> Thai Speaking & Chinese</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-card group bg-gray-50 p-8 rounded-[2.5rem] border border-gray-100 cursor-pointer transition-all hover:bg-white hover:shadow-2xl hover:border-orange-100" onclick="toggleCourse(this)" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-orange-500 text-white rounded-2xl flex items-center justify-center text-3xl shadow-lg shadow-orange-100 group-hover:rotate-12 transition-transform">
+                            <i class="fas fa-screwdriver-wrench"></i>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-400 group-hover:text-orange-500 transition-transform"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-2 italic uppercase">Vocational Skills</h3>
+                    <p class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-4">Practical training</p>
+                    
+                    <div class="course-detail">
+                        <ul class="space-y-3 border-t border-gray-100 pt-4">
+                            <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-orange-500"></i> Baking & Juice Course</li>
+                            <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-orange-500"></i> Haircutting (Basic/Adv)</li>
+                            <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-orange-500"></i> Home Electrical Repair</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-card group bg-gray-50 p-8 rounded-[2.5rem] border border-gray-100 cursor-pointer transition-all hover:bg-white hover:shadow-2xl hover:border-purple-100" onclick="toggleCourse(this)" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-purple-600 text-white rounded-2xl flex items-center justify-center text-3xl shadow-lg shadow-purple-100 group-hover:rotate-12 transition-transform">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-400 group-hover:text-purple-600 transition-transform"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-2 italic uppercase">Digital Skills</h3>
+                    <p class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-4">Modern Technology</p>
+                    
+                    <div class="course-detail">
+                        <ul class="space-y-3 border-t border-gray-100 pt-4">
+                            <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-purple-500"></i> Basic Computer & MS Office</li>
+                            <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-purple-500"></i> Professional Graphic Design</li>
+                            <li class="flex items-center gap-3 font-semibold text-slate-700"><i class="fas fa-check-circle text-purple-500"></i> Digital Marketing Income</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 bg-slate-900 text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-center mb-16 italic tracking-tighter" data-aos="fade-up">Student Reviews</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <a href="https://www.facebook.com/share/v/1HcRfvybuD/" target="_blank" class="relative group aspect-[9/16] rounded-2xl overflow-hidden bg-slate-800 border border-white/10" data-aos="zoom-in">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-play-circle text-5xl"></i>
+                    </div>
+                    <p class="absolute bottom-4 left-4 z-20 font-bold text-xs uppercase tracking-widest">New Skills Training Review 1</p>
+                </a>
+                <a href="https://www.facebook.com/share/v/14VofVQkECf/" target="_blank" class="relative group aspect-[9/16] rounded-2xl overflow-hidden bg-slate-800 border border-white/10" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20"><i class="fas fa-play-circle text-4xl opacity-50"></i></div>
+                    <p class="absolute bottom-4 left-4 z-20 font-bold text-xs uppercase tracking-widest">New Skills Training Review 2</p>
+                </a>
+                <a href="https://www.facebook.com/share/v/1DUPrgfkGD/" target="_blank" class="relative group aspect-[9/16] rounded-2xl overflow-hidden bg-slate-800 border border-white/10" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20"><i class="fas fa-play-circle text-4xl opacity-50"></i></div>
+                    <p class="absolute bottom-4 left-4 z-20 font-bold text-xs uppercase tracking-widest">New Skills Training Review 3</p>
+                </a>
+                <a href="https://www.facebook.com/share/v/1FbCKyjuie/" target="_blank" class="relative group aspect-[9/16] rounded-2xl overflow-hidden bg-slate-800 border border-white/10" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20"><i class="fas fa-play-circle text-4xl opacity-50"></i></div>
+                    <p class="absolute bottom-4 left-4 z-20 font-bold text-xs uppercase tracking-widest">New Skills Training Review 4</p>
+                </a>
+                <a href="https://www.facebook.com/share/r/1CzKD4PZNz/" target="_blank" class="relative group aspect-[9/16] rounded-2xl overflow-hidden bg-slate-800 border border-white/10" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20"><i class="fas fa-play-circle text-4xl opacity-50"></i></div>
+                    <p class="absolute bottom-4 left-4 z-20 font-bold text-xs uppercase tracking-widest">New Skills Training Review 5</p>
+                </a>
+                <a href="https://www.facebook.com/share/v/1AGfNZFwYA/" target="_blank" class="relative group aspect-[9/16] rounded-2xl overflow-hidden bg-slate-800 border border-white/10" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center z-20"><i class="fas fa-play-circle text-4xl opacity-50"></i></div>
+                    <p class="absolute bottom-4 left-4 z-20 font-bold text-xs uppercase tracking-widest">New Skills Training Review 6</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16">
+            <div data-aos="fade-right">
+                <h3 class="text-3xl font-black text-slate-900 mb-8 italic uppercase tracking-widest underline decoration-blue-600 decoration-4 underline-offset-8">Visit Our Center</h3>
+                <div class="space-y-6 mb-12">
+                    <div class="flex items-center gap-6 p-6 bg-gray-50 rounded-3xl border border-gray-100">
+                        <div class="text-blue-600 text-3xl"><i class="fas fa-map-location-dot"></i></div>
+                        <div>
+                            <p class="text-xs font-black text-gray-400 uppercase tracking-widest mb-1">Location</p>
+                            <p class="font-bold text-slate-700">Samut Sakhon, Thailand (Registration Active)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 p-6 bg-gray-50 rounded-3xl border border-gray-100">
+                        <div class="text-blue-600 text-3xl"><i class="fab fa-facebook-messenger"></i></div>
+                        <div>
+                            <p class="text-xs font-black text-gray-400 uppercase tracking-widest mb-1">Direct Message</p>
+                            <a href="https://m.me/180932821778115" class="font-black text-blue-600 hover:underline">m.me/newskillscenter</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://forms.gle/P3QbgVYQq4LA5PAH8" class="w-full block text-center bg-blue-600 text-white py-6 rounded-3xl font-black text-xl shadow-2xl shadow-blue-200 hover:bg-blue-700 transition-all uppercase tracking-tighter">
+                    Apply for Admission Now
+                </a>
+            </div>
+            <div class="rounded-[3rem] overflow-hidden shadow-2xl h-[450px] border-4 border-gray-50" data-aos="fade-left">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3878.783688562386!2d100.5931734751214!3d13.640582986737561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDM4JzI2LjEiTiAxMDDCsDM1JzQ0LjciRQ!5e0!3m2!1sen!2sth!4v1700000000000!5m2!1sen!2sth" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-gray-50 border-t border-gray-200 text-center">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <img src="logo.jpg" class="w-8 h-8 rounded-full" onerror="this.src='https://via.placeholder.com/30'">
+                    <span class="font-black tracking-tighter text-blue-900">NEW SKILLS TRAINING CENTER</span>
+                </div>
+                <p class="text-gray-400 text-[10px] font-bold uppercase tracking-[0.3em]">© 2026 NS. All Rights Reserved. Empowering Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Language Switcher
+        function toggleLang() {
+            const body = document.getElementById('body-context');
+            const btn = document.getElementById('lang-btn');
+            
+            if(body.classList.contains('lang-mm')) {
+                body.classList.remove('lang-mm');
+                body.classList.add('lang-en');
+                btn.innerText = "မြန်မာစာ";
+            } else {
+                body.classList.remove('lang-en');
+                body.classList.add('lang-mm');
+                btn.innerText = "English";
+            }
+        }
+
+        // Course Accordion
+        function toggleCourse(element) {
+            const isActive = element.classList.contains('active');
+            document.querySelectorAll('.course-card').forEach(card => card.classList.remove('active'));
+            if (!isActive) {
+                element.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
